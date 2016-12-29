@@ -120,6 +120,7 @@
 		"all_frames": true,
 		"js": [ "lib/jquery-2.0.2.min.js", "lib/proxy.js", "content.js" ],
 		"matches": [
+			"*://192.168.99.100/*",
 			"*://8tracks.com/*",
 			"*://www.8tracks.com/*",
 			"*://ah.fm/*",
@@ -192,6 +193,6 @@
 			"*://www.youtube.com/*",
 			"*://zaycev.fm/*",
 			"*://www.zaycev.fm/*"
-		] 
+		]
 	} ]
 }

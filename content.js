@@ -401,10 +401,10 @@ $(document).ready(function()
 		case 'play.google.com':
 			setInterval(function()
 			{
-				if ($('button.playing[data-id="play-pause"]').length)
+				if ($('div.now-playing-info-wrapper'))
 				{
 					var artistName = $('#player-artist').text();
-					var trackName  = $('#playerSongTitle').text();
+					var trackName = $('#currently-playing-title').text();
 					var play       = artistName + ' - ' + trackName;
 
 					if (last !== play)
@@ -414,7 +414,7 @@ $(document).ready(function()
 							nowPlaying : play,
 							trackName  : trackName,
 							artistName : artistName,
-							albumName  : $('.player-album').text(),
+							albumName  : $('#player-album').text(),
 							albumArt   : 'http:' + $('#playingAlbumArt').attr('src'),
 							duration   : $('#time_container_duration').text(),
 							url        : 'http://play.google.com'
@@ -654,7 +654,7 @@ $(document).ready(function()
 					var artistName = $.trim(selector.find('.artist').text());
 					var trackName  = $.trim(selector.find('.title').text());
 					var play       = artistName + ' - ' + trackName;
-					
+
 					if (last !== play)
 					{
 						nowPlaying(
