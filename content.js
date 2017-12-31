@@ -409,16 +409,18 @@ $(document).ready(function()
 
 					if (last !== play)
 					{
-						nowPlaying(
-						{
-							nowPlaying : play,
-							trackName  : trackName,
-							artistName : artistName,
-							albumName  : $('#player-album').text(),
-							albumArt   : 'http:' + $('#playingAlbumArt').attr('src'),
-							duration   : $('#time_container_duration').text(),
-							url        : 'http://play.google.com'
-						});
+						if(trackName != "undefined"){
+							nowPlaying(
+							{
+								nowPlaying : play,
+								trackName  : trackName,
+								artistName : artistName,
+								albumName  : $('#player-album').text(),
+								albumArt   : 'http:' + $('#playingAlbumArt').attr('src'),
+								duration   : $('#time_container_duration').text(),
+								url        : 'http://play.google.com'
+							});
+						}
 					}
 				}
 			}, 10000);
